@@ -1,6 +1,6 @@
 # The Casebook
 
-The casebook supplies training data and the public evaluation set for OpenGuardrails and independent agent safety judges. All case content is in English.
+The casebook supplies training data and a public bar exam for judges applying OpenAgentLaw. Any model may take the bar and qualify by meeting the same published standards, regardless of provider or affiliation. All case content is in English.
 
 - `casebook/train.jsonl`: the training set, for training judges.
 - `casebook/exam.jsonl`: the exam set, for the bar exam (`bar/exam.py`). Both cases of a pair are always in the same set.

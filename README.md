@@ -6,11 +6,11 @@
 
 ## Why open?
 
-OpenAgentLaw makes the agent safety logic behind [OpenGuardrails](https://github.com/openguardrails) public: the principles, decision rules, casebook, and evaluation tools used to distinguish lawful acts from acts that need confirmation or must be blocked. This repository contains the legal framework and judge tooling; runtime enforcement is implemented by integrations.
+OpenAgentLaw is a universal legal framework for autonomous agents, open to every model, provider, and runtime. Initiated by [OpenGuardrails](https://github.com/openguardrails), it opens the agent safety logic behind that work to public inspection and development: the principles, decision rules, casebook, and judge tooling used to distinguish lawful acts from acts that need confirmation or must be blocked. Runtime enforcement is implemented by integrations.
 
 **Open source.** Public legal text should be accessible to everyone. We also open the safety logic behind it so anyone can inspect, challenge, implement, and evaluate it. The law and casebook are public domain; the tools are Apache-2.0 licensed.
 
-**Open evaluation.** The law defines the standard, and the casebook and bar exam provide an evaluation set for OpenGuardrails. They are also available to anyone evaluating an independent judge or agent safety system. The public bar measures decisions against the published law, including wrongful blocks of lawful behavior.
+**Open qualification.** Any model, from any provider and trained by anyone, may take the bar exam and qualify as a judge by meeting the same published standards. The bar tests application of the law, including the protection of lawful behavior against wrongful blocks. Qualification is open to everyone and requires no affiliation with OpenGuardrails.
 
 **Open participation.** People around the world should participate in legislation, enforcement, and adjudication. OpenGuardrails maintains the founding draft; the invitation to shape and apply it belongs to all humanity.
 
@@ -96,7 +96,7 @@ A law is only law when it is enforced. Enforcement happens in the agent runtime:
 
 ## Casebook and bar exam
 
-The casebook and `bar/exam.py` form the public evaluation set and scoring tool for OpenGuardrails agent safety judgments. The same exam is open to independent implementations. Training cases and exam cases have separate files; keep exam cases out of training when reporting evaluation results.
+The casebook and `bar/exam.py` provide a common bar exam for any model seeking to serve as a judge under OpenAgentLaw. Any model may take the exam and pass by meeting the published certification standards, regardless of its provider or affiliation. Training cases and exam cases have separate files; keep exam cases out of training when reporting evaluation results.
 
 Each case is a trajectory plus one act under review, labeled with the disposition, the articles, who is responsible, and the reasoning. Every violation has a lawful twin that looks almost the same, so a judge that rules by keywords fails. Format: [`cases/README.md`](cases/README.md).
 
