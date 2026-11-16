@@ -121,10 +121,6 @@ This is a draft. No article has yet passed a public legislative process. The tra
 
 OpenAgentLaw does not replace the law of any nation. Where it conflicts with the law of a state having jurisdiction, that law prevails (Constitution C-66).
 
-## Contributors
-
-Thanks to [Göktuğ Özkan, MD (@goktugozkanmd)](https://github.com/goktugozkanmd) and [@putraperdana1207-pixel](https://github.com/putraperdana1207-pixel) for contributions to the benchmark lineage and Bar tooling. See [contributions and attribution](CONTRIBUTORS.md).
-
 ## License
 
 The Code and the casebook: CC0 1.0 (public domain). Tools: Apache-2.0. See [`LICENSE.md`](LICENSE.md).

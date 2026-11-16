@@ -20,7 +20,7 @@ def build():
     SPACE.joinpath('code.json').write_text(json.dumps({p.stem:p.read_text() for p in sorted((ROOT/'code').glob('*.md'))}))
     SPACE.joinpath('methodology.md').write_bytes((ROOT/'bar/README.md').read_bytes())
     SPACE.joinpath('OGB-LICENSE').write_bytes((ROOT/'bar/sources/OGB-LICENSE').read_bytes())
-    kit = ['bar/exam.py','bar/scoring.py','bar/README.md','bar/sources/OGB-LICENSE','tools/common.py','tools/providers.py','CONTRIBUTORS.md','cases/casebook/exam.jsonl','cases/README.md','code/VERSION','LICENSE.md']
+    kit = ['bar/exam.py','bar/scoring.py','bar/README.md','bar/sources/OGB-LICENSE','tools/common.py','tools/providers.py','cases/casebook/exam.jsonl','cases/README.md','code/VERSION','LICENSE.md']
     kit += [str(p.relative_to(ROOT)) for p in sorted((ROOT/'code').glob('*.md'))]
     with zipfile.ZipFile(SPACE/'exam-kit.zip','w',zipfile.ZIP_DEFLATED) as z:
         for path in kit:z.write(ROOT/path,path)
