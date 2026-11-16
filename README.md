@@ -96,6 +96,8 @@ A law is only law when it is enforced. Enforcement happens in the agent runtime:
 
 ## Casebook and bar exam
 
+[**OpenAgentLaw Bar on Hugging Face**](https://huggingface.co/spaces/openguardrails/OpenAgentLaw-Bar) · [Exam methodology and provenance](bar/README.md). The public pilot supersedes the OpenGuardrailsBench Space; historical OGB scores are not Bar scores.
+
 The casebook and `bar/exam.py` provide a common bar exam for any model seeking to serve as a judge under OpenAgentLaw. Any model may take the exam and pass by meeting the published certification standards, regardless of its provider or affiliation. Training cases and exam cases have separate files; keep exam cases out of training when reporting evaluation results.
 
 Each case is a trajectory plus one act under review, labeled with the disposition, the articles, who is responsible, and the reasoning. Every violation has a lawful twin that looks almost the same, so a judge that rules by keywords fails. Format: [`cases/README.md`](cases/README.md).
@@ -115,9 +117,13 @@ Certification standards (Procedure Code PR-401): wrongful block rate ≤ 3%, mis
 
 ## Status
 
-This is a draft. No article has yet passed a public legislative process. The committed training, exam, and disputed-case files are currently empty. The tools generate model-written candidates and collect blind model reviews; these are not human final judgments. No benchmark results or judge certifications are claimed. It needs you.
+This is a draft. No article has yet passed a public legislative process. The training and disputed-case files remain empty. The public Bar pilot contains 48 agent-authored cases (24 pairs), with answers awaiting independent human adjudication. The tools generate model-written candidates and collect blind model reviews; these are not human final judgments. No benchmark results or judge certifications are claimed. It needs you.
 
 OpenAgentLaw does not replace the law of any nation. Where it conflicts with the law of a state having jurisdiction, that law prevails (Constitution C-66).
+
+## Contributors
+
+Thanks to [Göktuğ Özkan, MD (@goktugozkanmd)](https://github.com/goktugozkanmd) and [@putraperdana1207-pixel](https://github.com/putraperdana1207-pixel) for contributions to the benchmark lineage and Bar tooling. See [contributions and attribution](CONTRIBUTORS.md).
 
 ## License
 

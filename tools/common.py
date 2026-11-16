@@ -79,7 +79,7 @@ def code_digest(arts=None):
 def _chat_openai(messages, temperature, max_tokens):
     url = os.environ.get("OPENAGENTLAW_LLM_URL", "http://localhost:8000/v1").rstrip("/") + "/chat/completions"
     body = {"model": os.environ.get("OPENAGENTLAW_LLM_MODEL", "dsv41-flash"), "messages": messages,
-            "temperature": temperature, "max_tokens": max_tokens}
+            "temperature": temperature, "max_tokens": int(os.environ.get("OPENAGENTLAW_LLM_MAX_TOKENS", str(max_tokens)))}
     req = urllib.request.Request(url, data=json.dumps(body).encode(), headers={
         "Content-Type": "application/json",
         "Authorization": "Bearer " + os.environ.get("OPENAGENTLAW_LLM_KEY", "none")})

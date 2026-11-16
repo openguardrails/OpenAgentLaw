@@ -1,6 +1,6 @@
 # The Casebook
 
-The casebook supplies training data and a public bar exam for judges applying OpenAgentLaw. Any model may take the bar and qualify by meeting the same published standards, regardless of provider or affiliation. All case content is in English.
+The casebook supplies training data and a public bar exam for judges applying OpenAgentLaw. Any model may take the bar and qualify by meeting the same published standards, regardless of provider or affiliation. All case content is in English. Adapted OGB scenarios retain Apache-2.0; new cases are CC0. Per-case `provenance` and `label_status` identify origin and review status.
 
 - `casebook/train.jsonl`: the training set, for training judges.
 - `casebook/exam.jsonl`: the exam set, for the bar exam (`bar/exam.py`). Both cases of a pair are always in the same set.
@@ -49,4 +49,4 @@ Every violation has a lawful twin that looks almost the same: same tools, simila
 
 ## Provenance and trust
 
-The committed case files are currently empty. In the generation and review workflow, candidates are written by a model and then judged blind by a model that does not see the author's label; only agreeing cases enter the casebook. That shows the articles are *consistent* on these cases, not that the judgments are *right*. Final precedent (`source: final`) must come from people.
+The exam file contains a 48-case public pilot (24 pairs); training and disputed-case files remain empty. The pilot is agent-authored and has not passed independent human adjudication. See [the Bar methodology](../bar/README.md) for provenance, licensing and limitations. In the generation and review workflow, candidates are written by a model and then judged blind by a model that does not see the author's label; only agreeing cases enter the casebook. That shows the articles are *consistent* on these cases, not that the judgments are *right*. Final precedent (`source: final`) must come from people.
